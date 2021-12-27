@@ -1,10 +1,14 @@
 pipeline {
+    agent any
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
-               echo 'hello from first pipeline'
+                sh 'echo "hello from the first pipeline"'
+                sh '''
+                    echo "Multiline shell steps works too"
+                    ls -lah
+                '''
             }
         }
     }
 }
-
