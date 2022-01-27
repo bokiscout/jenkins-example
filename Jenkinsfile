@@ -10,5 +10,10 @@ pipeline {
                 '''
             }
         }
+        stage('build-again') {
+            steps {
+                sh 'echo "build-again"'
+            }
+        }
     }
 }
